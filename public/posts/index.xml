@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Raphaël Sterbac Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Raphaël Sterbac Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Feb 2026 18:03:24 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Week</title>
+      <link>http://localhost:1313/posts/first-week-02-feb/</link>
+      <pubDate>Thu, 05 Feb 2026 18:03:24 +0000</pubDate>
+      <guid>http://localhost:1313/posts/first-week-02-feb/</guid>
+      <description>&lt;h1 id=&#34;subtyping-and-parametrised-inductive-types&#34;&gt;Subtyping and Parametrised Inductive Types&lt;/h1&gt;&#xA;&lt;p&gt;On Tuesday, which was my first proper day, I focused on the potential issues we could&#xA;encounter when adding structural subtyping and Parametrised Inductive types. A typical&#xA;and pathological example of the latter is the list datatype $\text{List}(A)$.&lt;/p&gt;&#xA;&lt;p&gt;If we allow the user to deduce $l : \text{List}(U_{i+1})$ from $l : \text{List}(U_{i})$,&#xA;then we would also have both $nil_{i} : \text{List}(U_{i+1})$ and $nil_{i+1} : \text{List}(U_{i+1})$.&#xA;However, we wouldn&amp;rsquo;t have $nil_{i}  = nil_{i+1}$, unless we add the equation. This breaks canonicity&#xA;for inductive types, and could lead to weird error messages on the user-side such as &lt;code&gt;Could not unify nil and nil&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First Post</title>
+      <link>http://localhost:1313/posts/first-post/</link>
+      <pubDate>Tue, 03 Feb 2026 09:13:35 +0000</pubDate>
+      <guid>http://localhost:1313/posts/first-post/</guid>
+      <description>&lt;p&gt;First post !&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
