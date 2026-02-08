@@ -56,14 +56,14 @@ Also, I am not "calling" the unification algorithm at the moment, and I'm not su
 **Uniqueness up to erasure.** If $\Gamma \vdash u_0 : A_0$ and $\Gamma \vdash u_1 : A_1$ in Tarski-style, with $|u_0| = |u_1|$ and
 $|A_0| = |A_1|$ (syntaxical equality when removing all the lifts), then : $\Gamma \vdash A_0 = A_1$ and  $\Gamma \vdash u_0 = u_1 : A_0$.
 
-To me this indicates that if we can prove normalisation (probably iwth a gluing argument), we could prove the injectivity result directly
+To me this indicates that if we can prove normalisation (probably with a gluing argument), we could prove the injectivity result directly
 with a clever proof by (mutual) induction.
 
 # Strict universes for Grothendieck topoi
 
 I also spent some time reading the paper *Strict universes for Grothendieck topoi*, and tried to get the most out of it.
 
-Something that occured to me is that there is no mention about injectivity of the decoding `El`, which would correspond
+Something that occurred to me is that there is no mention of injectivity of the decoding `El`, which would correspond
 to a kind of "injectivity" of the generic family in the model.
 
 Maybe the "injectivity" comes from the universal property of pullback, as if we substitute $a$ and $b$ in $\pi$ and get the same result, by
