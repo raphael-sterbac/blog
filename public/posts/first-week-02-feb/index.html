@@ -14,7 +14,7 @@ If we allow the user to deduce $l : \text{List}(U_{i&#43;1})$ from $l : \text{Li
 then we would also have both $nil_{i} : \text{List}(U_{i&#43;1})$ and $nil_{i&#43;1} : \text{List}(U_{i&#43;1})$.
 However, we wouldn&rsquo;t have $nil_{i}  = nil_{i&#43;1}$, unless we add the equation. This breaks canonicity
 for inductive types, and could lead to weird error messages on the user-side such as Could not unify nil and nil.">
-    <meta name="generator" content="Hugo 0.154.2">
+    <meta name="generator" content="Hugo 0.154.5">
     
     
     
@@ -60,7 +60,7 @@ If we allow the user to deduce $l : \text{List}(U_{i&#43;1})$ from $l : \text{Li
 If we allow the user to deduce $l : \text{List}(U_{i&#43;1})$ from $l : \text{List}(U_{i})$, then we would also have both $nil_{i} : \text{List}(U_{i&#43;1})$ and $nil_{i&#43;1} : \text{List}(U_{i&#43;1})$. However, we wouldn’t have $nil_{i} = nil_{i&#43;1}$, unless we add the equation. This breaks canonicity for inductive types, and could lead to weird error messages on the user-side such as Could not unify nil and nil.">
   <meta itemprop="datePublished" content="2026-02-05T18:03:24+00:00">
   <meta itemprop="dateModified" content="2026-02-05T18:03:24+00:00">
-  <meta itemprop="wordCount" content="495">
+  <meta itemprop="wordCount" content="663">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="First Week">
   <meta name="twitter:description" content="Subtyping and Parametrised Inductive Types On Tuesday, which was my first proper day, I focused on the potential issues we could encounter when adding structural subtyping and Parametrised Inductive types. A typical and pathological example of the latter is the list datatype $\text{List}(A)$.
@@ -154,9 +154,11 @@ hierarchy&rdquo; with smallness judgement.</p>
 <p>To do this, I first got used to bidirectional elaboration as described in <em>Cosmology of datatypes</em>, and then
 tried to write the specification. First, I specified the definitions for type-connective codes, as it is done
 for the product type in the blogpost.</p>
-<p>Then, the elaboration should translate $\Pi A B :  U_i$ to $\Pi^i A&rsquo; B&rsquo; : U_i$ where $\Pi^i$ is the
+<p>For example, the elaboration should translate $\Pi A B :  U_i$ to $\Pi^i A&rsquo; B&rsquo; : U_i$ where $\Pi^i$ is the
 code for product types and $A&rsquo;$, $B&rsquo;$ are the elaborated versions of $A$ and $B$.</p>
-<p>We can also do that for universes, and lifts (???), inductive types (???)</p>
+<p>We can also do that for universes, and I&rsquo;m currently thinking on how to elaborate lifts/cummulativity and
+generic datatypes or inductive types.</p>
+<p>Also, I am not &ldquo;calling&rdquo; the unification algorithm at the moment, and I&rsquo;m not sure to see where it would be needed.</p>
 <h1 id="injectivity-of-decoding-and-lifting">Injectivity of decoding and lifting</h1>
 <p>I spent some time thinking about how to prove injectivity of decoding and lifting. First,
 I was trying to prove it using a normalisation by evaluation method, such as the one for proving
@@ -168,10 +170,19 @@ we can construct a proof of $\Gamma \vdash a = b : U_i$. This can be proven easi
 on the derivation, <em>mutatis mutandis</em>.</p>
 <p>With the equivalence result, we can then convert the judgement $\Gamma \vdash t_i^j(a) = t_i^j(b) : U_j$ back and forth,
 to get directly $\Gamma \vdash a = b : U_i$ in the Tarski theory !</p>
-<p>This proof seems quite elegant and intuitive to me, even if it hides all the work in the equivalence result. Concretely,
-the important (and not trivial) result that embodies the injectivity is the &ldquo;uniqueness up to erasure&rdquo; result.</p>
+<p>This proof seems quite elegant and intuitive to me if we think as the Russell theory as a kind of model. The hard work is hidden
+in the equivalence result. Concretely,
+the important (and non trivial) result that embodies the injectivity is the &ldquo;uniqueness up to erasure&rdquo; result.</p>
 <p><strong>Uniqueness up to erasure.</strong> If $\Gamma \vdash u_0 : A_0$ and $\Gamma \vdash u_1 : A_1$ in Tarski-style, with $|u_0| = |u_1|$ and
 $|A_0| = |A_1|$ (syntaxical equality when removing all the lifts), then : $\Gamma \vdash A_0 = A_1$ and  $\Gamma \vdash u_0 = u_1 : A_0$.</p>
+<p>To me this indicates that if we can prove normalisation (probably with a gluing argument), we could prove the injectivity result directly
+with a clever proof by (mutual) induction.</p>
+<h1 id="strict-universes-for-grothendieck-topoi">Strict universes for Grothendieck topoi</h1>
+<p>I also spent some time reading the paper <em>Strict universes for Grothendieck topoi</em>, and tried to get the most out of it.</p>
+<p>Something that occurred to me is that there is no mention of injectivity of the decoding <code>El</code>, which would correspond
+to a kind of &ldquo;injectivity&rdquo; of the generic family in the model.</p>
+<p>Maybe the &ldquo;injectivity&rdquo; comes from the universal property of pullback, as if we substitute $a$ and $b$ in $\pi$ and get the same result, by
+uniqueness of the pullback we can deduce $a = b$. I&rsquo;m not sure.</p>
 <ul class="pa0">
   
 </ul>

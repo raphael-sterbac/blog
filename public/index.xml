@@ -6,8 +6,15 @@
     <description>Recent content on Raphaël Sterbac Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2026 18:03:24 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Feb 2026 18:03:24 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second Week</title>
+      <link>http://localhost:1313/posts/second-week/</link>
+      <pubDate>Sun, 15 Feb 2026 18:03:24 +0000</pubDate>
+      <guid>http://localhost:1313/posts/second-week/</guid>
+      <description>&lt;h1 id=&#34;elaboration-of-the-universe-hierarchy&#34;&gt;Elaboration of the universe hierarchy&lt;/h1&gt;&#xA;&lt;p&gt;When elaborating the &amp;ldquo;fuss-free&amp;rdquo; universe hierarchy, we need a mode switch for checking neutral types against&#xA;the smallness judgement. This might cause unexpected issue to have two mode switch, and will not be well-behaved&#xA;with unification and sub-typing (just like the issue for the algebraic hierarchies).&lt;/p&gt;&#xA;&lt;p&gt;Hence, we need to introduce casts to tell the type checker to try to lift to another universe instead&#xA;of trying to unify something. Also, from the elaboration perspective, the &amp;ldquo;fuss-free&amp;rdquo; hierarchy is not of a great&#xA;help after all. The smallness judgement and code for type connective can be elaborated easily but we have to much&#xA;downsides with the smalness judgement needing a mode switch and being not needed anyway.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>First Week</title>
       <link>http://localhost:1313/posts/first-week-02-feb/</link>
