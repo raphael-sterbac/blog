@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Raphaël Sterbac Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Feb 2026 18:03:24 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Feb 2026 12:52:43 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Third week</title>
+      <link>http://localhost:1313/posts/third-week/</link>
+      <pubDate>Mon, 23 Feb 2026 12:52:43 +0000</pubDate>
+      <guid>http://localhost:1313/posts/third-week/</guid>
+      <description>&lt;h1 id=&#34;equivalence-between-fuss-free-and-tarksi&#34;&gt;Equivalence between Fuss-Free and Tarksi&lt;/h1&gt;&#xA;&lt;p&gt;When showing that we can translate from a strict Tarski hierarchy to the Fuss-free&#xA;formulation, we can&amp;rsquo;t define $Small_i$ as a proper type internally. To solve this issue,&#xA;we can show this direction of the equivalence result by a semantics argument, showing&#xA;that the syntactic category with family (CwF) $\mathcal{T}_T$ of the strict Tarski theory&#xA;is a model of the fuss-free hierarchy. To do this, we define $Small_i$ as the characteristic&#xA;map of the monomorphism $\text{El}_i$. Then, this satisfies the smallness rules of the fuss-free formulation,&#xA;and we can define the coding map as a pullback map of the cartesian square defining the characteristic map $\text{Small}_i$.&#xA;So now the equivalence result is completely proven!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Second Week</title>
       <link>http://localhost:1313/posts/second-week/</link>
