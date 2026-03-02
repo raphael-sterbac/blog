@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>4th Week | Raphaël Sterbac Blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Starting to write a paper
+I&rsquo;m glad to say that I started working on a paper with Jon, which will cover some of the stuff written here and aiming
+at clarifying the state of affairs when it comes to cumulative hierarchies of universes in dependent type theory and
+proof assistants, with a focus on both theoretical and practical aspects.
+This work will partially use ideas from my previous internship with Thierry Coquand focusing on the equivalence between
+Tarski and Russell universe, work I will be presenting at TYPES 2026 this year.">
+    <meta name="generator" content="Hugo 0.155.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/4th-week/">
+    
+
+    
+    
+    <meta property="og:url" content="http://localhost:1313/posts/4th-week/">
+  <meta property="og:site_name" content="Raphaël Sterbac Blog">
+  <meta property="og:title" content="4th Week">
+  <meta property="og:description" content="Starting to write a paper I’m glad to say that I started working on a paper with Jon, which will cover some of the stuff written here and aiming at clarifying the state of affairs when it comes to cumulative hierarchies of universes in dependent type theory and proof assistants, with a focus on both theoretical and practical aspects.
+This work will partially use ideas from my previous internship with Thierry Coquand focusing on the equivalence between Tarski and Russell universe, work I will be presenting at TYPES 2026 this year.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-01T18:07:33+00:00">
+    <meta property="article:modified_time" content="2026-03-01T18:07:33+00:00">
+
+  <meta itemprop="name" content="4th Week">
+  <meta itemprop="description" content="Starting to write a paper I’m glad to say that I started working on a paper with Jon, which will cover some of the stuff written here and aiming at clarifying the state of affairs when it comes to cumulative hierarchies of universes in dependent type theory and proof assistants, with a focus on both theoretical and practical aspects.
+This work will partially use ideas from my previous internship with Thierry Coquand focusing on the equivalence between Tarski and Russell universe, work I will be presenting at TYPES 2026 this year.">
+  <meta itemprop="datePublished" content="2026-03-01T18:07:33+00:00">
+  <meta itemprop="dateModified" content="2026-03-01T18:07:33+00:00">
+  <meta itemprop="wordCount" content="906">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="4th Week">
+  <meta name="twitter:description" content="Starting to write a paper I’m glad to say that I started working on a paper with Jon, which will cover some of the stuff written here and aiming at clarifying the state of affairs when it comes to cumulative hierarchies of universes in dependent type theory and proof assistants, with a focus on both theoretical and practical aspects.
+This work will partially use ideas from my previous internship with Thierry Coquand focusing on the equivalence between Tarski and Russell universe, work I will be presenting at TYPES 2026 this year.">
+
+	
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js" integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
+
+
+  </head><body class="ma0 avenir bg-near-white development is-page is-page page-4th-Week">
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Raphaël Sterbac Blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+
+  <article class="page-4th-Week flex-l mw7 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">4th Week</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2026-03-01T18:07:33Z">March 1, 2026</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><h1 id="starting-to-write-a-paper">Starting to write a paper</h1>
+<p>I&rsquo;m glad to say that I started working on a paper with Jon, which will cover some of the stuff written here and aiming
+at clarifying the state of affairs when it comes to cumulative hierarchies of universes in dependent type theory and
+proof assistants, with a focus on both theoretical and practical aspects.</p>
+<p>This work will partially use ideas from my previous internship with Thierry Coquand focusing on the equivalence between
+Tarski and Russell universe, work I will be presenting at TYPES 2026 this year.</p>
+<h1 id="correcting-things-from-last-weeks-post">Correcting things from last week&rsquo;s post</h1>
+<p>Last week I summarized the equivalence result showing that the strict Tarski hierarchy is equivalent to our more concise and still
+algebraic Fuss-Free presentation. I said that this result legitimates the study of injective (but not necessarily strict!)
+hierarchies of universes in (infinity)-topos models. I also looked at the Hoffman-Streicher construction and showed that the construction preserved
+injective lifts, which are also preserved by sheafification.</p>
+<p>I also stated the following equivalence result :
+\[ \text{[StrictLift, StrictEl]} \Longleftrightarrow \text{[InjLift, InjEl]} \Longleftrightarrow \text{Fuss-Free}\]</p>
+<p>However, the first equivalence is not exact, and the implication \[\text{[InjLift, InjEl]} \Longrightarrow \text{[StrictLift, StrictEl]}\] does not hold. Indeed,
+if the codes are unique, it does not mean that they are necessarily strict. If we have an injective decoding map but no codes for the type connectives, we can&rsquo;t
+really deduce anything, as we are imposing nothing more than having an injective map $U_i \rightarrow Type$.</p>
+<p>The real implication we have, which is not that well-known is that : \[\text{[InjEl, StrictEl]} \Longrightarrow \text{[InjLift, StrictLift]}\] Hence, we have the equivalences:</p>
+<p>\[ \text{[StrictLift, StrictEl]} \Longleftrightarrow \text{[StrictEl, InjEl]} \Longleftrightarrow \text{Fuss-Free}\]</p>
+<p>However, if we interpret the decoding map in the model with a top universe, then the condition StrictEl amounts at showing that the lifting is strict, and thus
+this result is really limited in practice. Also, if we want to find a generic map $\pi$ which is injective in a topos, we end up to require a <em>strong</em> classifying map, which is
+generally hard to get in practice. For example, the Hoffman-Streicher construction on presheaves provides such a strong classifying map, but this is not preserved by sheafification.
+Also, when we want to classify fibrations, the classifying map would provide an isomorphism $\mathcal{E}(B,U) \cong \mathcal{S}_B$ between a set and the groupoid of small-fibrations
+over B, and this can&rsquo;t be unless $\mathcal{E}$ is not really interesting (see Riehl&rsquo;s lecture notes on infinity topos semantics). All of this is not completely clear to me yet.</p>
+<p>Hence, it is still quite strange to me that the injectivity of the decoding map is admissible in the syntax, but this hard to get in topos models. However, If one thinks of the
+realignment property as a weakening of strong classifying maps (like it is described in Riehl or Streicher), which requires that we can <em>choose</em> coherent codes which propagates with lifts
+instead of forcing everything to be coherent. Thus, I think that the result $\text{[InjEl, StrictEl]} \Longleftrightarrow \text{[StrictEl, StrictLift]}$ can be seen as a way to justify syntactically that we ask
+for the weaker property of realignment in the semantics instead of a strong classifying map. I think that there is at least an interesting comment to make here.</p>
+<p>So, summarizing all of this, one interesting result is that the Fuss-Free presentation is equivalent to the Strict Tarski presentation. This does not seem to help much in the semantics side, but it is still an
+improvement from the syntax perspective, providing a more concise and algebraic presentation. This equivalence result justifies the fact that we interpret the fuss-free syntax in a model where we do not require
+the decoding map to be injective. From the implementation perspective, the fuss-free presentation enables to simplify the conversion checker of a proof assistant.</p>
+<h1 id="working-a-bit-on-finishing-the-formalisation-of-my-previous-internship">Working a bit on finishing the formalisation of my previous internship</h1>
+<p>With the TYPES acceptance, and the draft of the new paper, I&rsquo;ve been working a bit on the content of my previous internship. For instance,
+I&rsquo;ve made the formalisation of my work available on <a href="https://github.com/raphael-sterbac/Russell-Tarski-Equivalence">Github</a>. I have been working at this
+formalisation in the past few months, to make sure that all the cases were correctly treated in my pen and paper proof, and also to emphasize the fact
+that the proof is algorithmic and provides a computable section of the erasure map from Tarski to Russell universes.</p>
+<p>I am also coming back at my normalisation by gluing proof, for example to clarify the need of [StrictLift] on top of [StrictEl] to deduce [InjEl] by the gluing argument.
+I thought that this was necessary so that we are able to propagate the lifts inside the terms, and if we are not able to do that we may end up with strange normal forms.
+However, I think that if this is true for terms, it may still be enough for types and thus to prove [InjEl] if we have the equation $El_j(Lift_i^j(a)) = El_i(a)$. Indeed, then I think we recover well-formed
+normal types even without the strict lift equations. For instance, we still have \[El_1(Lift_0^1(\Pi^0 \  a \  b)) = El_1(\Pi^1 \  Lift_0^1(a) \  Lift_0^1(b))\] even if
+\[Lift_0^1(\Pi^0 \  a \  b) \neq \Pi^1 \  Lift_0^1(a) \  Lift_0^1(b)\]
+So I will still need to investigate a bit more the need for [StrictLift], but It may not be necessary to get normal types of the form
+\[ U_i \ | \ \Pi(A,B) \ | \ El_i(\text{Neut}) \]</p>
+<ul class="pa0">
+  
+</ul>
+
+      
+    </div></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  Raphaël Sterbac Blog 2026 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

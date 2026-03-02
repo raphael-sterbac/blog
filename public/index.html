@@ -7,7 +7,7 @@
     <title>Raphaël Sterbac Blog</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Hugo 0.155.3">
     
     
     
@@ -49,8 +49,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Raphaël Sterbac Blog">
-  <meta itemprop="datePublished" content="2026-02-23T12:52:43+00:00">
-  <meta itemprop="dateModified" content="2026-02-23T12:52:43+00:00">
+  <meta itemprop="datePublished" content="2026-03-01T18:07:33+00:00">
+  <meta itemprop="dateModified" content="2026-03-01T18:07:33+00:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Raphaël Sterbac Blog">
 
@@ -115,6 +115,34 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/4th-week/" class="color-inherit dim link">
+            4th Week
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <h1 id="starting-to-write-a-paper">Starting to write a paper</h1>
+<p>I&rsquo;m glad to say that I started working on a paper with Jon, which will cover some of the stuff written here and aiming
+at clarifying the state of affairs when it comes to cumulative hierarchies of universes in dependent type theory and
+proof assistants, with a focus on both theoretical and practical aspects.</p>
+<p>This work will partially use ideas from my previous internship with Thierry Coquand focusing on the equivalence between
+Tarski and Russell universe, work I will be presenting at TYPES 2026 this year.</p>
+        </div>
+        <a href="/posts/4th-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="w-100 mb4 relative">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l dark-gray no-underline">
+    <div class="flex-column flex-row-ns flex">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/third-week/" class="color-inherit dim link">
             Third week
             </a>
@@ -168,42 +196,18 @@ downsides with the smalness judgement needing a mode switch and being not needed
 
           </div>
         
-          <div class="w-100 mb4 relative">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l dark-gray no-underline">
-    <div class="flex-column flex-row-ns flex">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/first-week-02-feb/" class="color-inherit dim link">
-            First Week
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <h1 id="subtyping-and-parametrised-inductive-types">Subtyping and Parametrised Inductive Types</h1>
-<p>On Tuesday, which was my first proper day, I focused on the potential issues we could
-encounter when adding structural subtyping and Parametrised Inductive types. A typical
-and pathological example of the latter is the list datatype $\text{List}(A)$.</p>
-<p>If we allow the user to deduce $l : \text{List}(U_{i+1})$ from $l : \text{List}(U_{i})$,
-then we would also have both $nil_{i} : \text{List}(U_{i+1})$ and $nil_{i+1} : \text{List}(U_{i+1})$.
-However, we wouldn&rsquo;t have $nil_{i}  = nil_{i+1}$, unless we add the equation. This breaks canonicity
-for inductive types, and could lead to weird error messages on the user-side such as <code>Could not unify nil and nil</code>.</p>
-        </div>
-        <a href="/posts/first-week-02-feb/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
         <section class="w-100">
           <h1 class="f3">More</h1>
           
+          
+            <h2 class="f5 fw4 mb4 dib mr3">
+              <a href="/posts/first-week-02-feb/" class="link black dim">
+                First Week
+              </a>
+            </h2>
           
             <h2 class="f5 fw4 mb4 dib mr3">
               <a href="/posts/first-post/" class="link black dim">

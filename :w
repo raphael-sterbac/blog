@@ -1,0 +1,64 @@
++++
+date = '2026-03-01T18:07:33Z'
+title = '4th Week'
+math = true
++++
+
+
+# Starting to write a paper
+
+I'm glad to say that I started working on a paper with Jon, which will cover some of the stuff written here and aiming
+at clarifying the state of affairs when it comes to cumulative hierarchies of universes in dependent type theory and
+proof assistants, with a focus on both theoretical and practical aspects.
+
+This work will partially use ideas from my previous internship with Thierry Coquand focusing on the equivalence between
+Tarski and Russell universe, work I will be presenting at TYPES 2026 this year.
+
+
+# Correcting things from last week's post 
+
+Last week I summarized the equivalence result showing that the strict Tarski hierarchy is equivalent to our more concise and still
+algebraic Fuss-Free presentation. I said that this result legitimates the study of injective (but not necessarily strict!)
+hierarchies of universes in (infinity)-topos models. I also looked at the Hoffman-Streicher construction and showed that the construction preserved 
+injective lifts, which are also preserved by sheafification. 
+
+I also stated the following equivalence result :
+\\[ \text{[StrictLift, StrictEl]} \Longleftrightarrow \text{[InjLift, InjEl]} \Longleftrightarrow \text{Fuss-Free}\\]
+
+However, the first equivalence is not exact, and the implication \\[\text{[InjLift, InjEl]} \Longrightarrow \text{[StrictLift, StrictEl]}\\] does not hold. Indeed,
+if the codes are unique, it does not mean that they are necessarily strict. If we have an injective decoding map but no codes for the type connectives, we can't
+really deduce anything, as we are imposing nothing more than having an injective map $U_i \rightarrow Type$.
+
+The real implication we have, which is not that well-known is that : \\[\text{[InjEl, StrictEl]} \Longrightarrow \text{[InjLift, StrictLift]}\\] Hence, we have the equivalences:
+
+\\[ \text{[StrictLift, StrictEl]} \Longleftrightarrow \text{[StrictEl, InjEl]} \Longleftrightarrow \text{Fuss-Free}\\]
+
+However, if we interpret the decoding map in the model with a top universe, then the condition StrictEl amounts at showing that the lifting is strict, and thus
+this result is really limited in practice. Also, if we want to find a generic map $\pi$ which is injective in a topos, we end up to require a *strong* classifying map, which is 
+generally hard to get in practice. For example, the Hoffman-Streicher construction on presheaves provides such a strong classifying map, but this is not preserved by sheafification.
+Also, when we want to classify fibrations, the classifying map would provide an isomorphism $\mathcal{E}(B,U) \cong \mathcal{S}_B$ between a set and the groupoid of small-fibrations
+over B, and this can't be unless $\mathcal{E}$ is not really interesting (see Riehl's lecture notes on infinity topos semantics). All of this is not completely clear to me yet.
+
+Hence, it is still quite strange to me that the injectivity of the decoding map is admissible in the syntax, but this hard to get in topos models. However, If one thinks of the
+realignment property as a weakening of strong classifying maps (like it is described in Riehl or Streicher), which requires that we can *choose* coherent codes which propagates with lifts
+instead of forcing everything to be coherent. Thus, I think that the result $\text{[InjEl, StrictEl]} \Longleftrightarrow \text{[StrictEl, StrictLift]}$ can be seen as a way to justify syntactically that we ask
+for the weaker property of realignment in the semantics instead of a strong classifying map.
+
+So, summarizing all of this, one interesting result is that the Fuss-Free presentation is equivalent to the Strict Tarski presentation. This does not seem to help much in the semantics side, but it is still an 
+improvement from the syntax perspective, providing a more concise and algebraic presentation. This equivalence result justifies the fact that we interpret the fuss-free syntax in a model where we do not require
+the decoding map to be injective. From the implementation perspective, the fuss-free presentation enables to simplify the conversion checker of a proof assistant.
+
+# Working a bit on finishing the formalisation of my previous internship
+
+With the TYPES acceptance, and the draft of the new paper, I've been working a bit on the content of my previous internship. For instance,
+I've made the formalisation of my work available on [Github](https://github.com/raphael-sterbac/Russell-Tarski-Equivalence). I have been working at this
+formalisation in the past few months, to make sure that all the cases were correctly treated in my pen and paper proof, and also to emphasize the fact
+that the proof is algorithmic and provides a computable section of the erasure map from Tarski to Russell universes.
+
+I am also coming back at my normalisation by gluing proof, for example to clarify the need of [StrictLift] on top of [StrictEl] to deduce [InjEl] by the gluing argument. 
+I thought that this was necessary so that we are able to propagate the lifts inside the terms, and if we are not able to do that we may end up with strange normal forms.
+However, I think that this is true for terms that will get strange normal forms, but if we have the equation $El_j(Lift_i^j(a)) = El_i(a)$ then I think we recover well-formed
+normal types even without the strict lift equations. For instance, we still have \\[El_1(Lift_0^1(\Pi^0 \; a \; b)) = El_1(\Pi^1 \; Lift_0^1(a) \; Lift_0^1(b))\\] even if
+\\[Lift_0^1(\Pi^0 \; a \; b) \neq \Pi^1 \; Lift_0^1(a) \; Lift_0^1(b)\\]
+So I will still need to investigate a bit more the need for [StrictLift], but It may not be necessary to get normal types of the form 
+\\[ U_i \; | \; \Pi(A,B) \; | \, El_i(\text{Neut}) \\]
