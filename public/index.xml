@@ -6,14 +6,21 @@
     <description>Recent content on Raphaël Sterbac Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Mar 2026 18:07:33 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2026 09:44:43 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5th Week</title>
+      <link>http://localhost:1313/posts/5th-week/</link>
+      <pubDate>Tue, 10 Mar 2026 09:44:43 +0000</pubDate>
+      <guid>http://localhost:1313/posts/5th-week/</guid>
+      <description>&lt;h1 id=&#34;implementing-the-fuss-free-hierarchy&#34;&gt;Implementing the Fuss-Free hierarchy&lt;/h1&gt;&#xA;&lt;p&gt;I have been tinkering with implementation a bit this week, reading Andras Kovacs elaboration zoo code and trying to&#xA;understand bidirectional elaboration and evaluation in practice. This lead me to try modifying his implementation of&#xA;implicit cumulative universes to work with the Fuss-Free hierarchy in the core, thus elaborating the implicit user syntax&#xA;to the fuss-free hierarchy.&lt;/p&gt;&#xA;&lt;p&gt;This was simply an implementation of the elaboration rules I previously wrote on paper, but I got to see how this would&#xA;work in practice. For example, in the practical implementation, it appears that a synthesis rule is needed for Pi and U, to&#xA;infer types in things like : &amp;rsquo;let f : U 1 -&amp;gt; U 1 = \A. A&amp;rsquo;, where we need to infer the universe level of &amp;lsquo;U 1 -&amp;gt; U 1&amp;rsquo;. To do this,&#xA;I wrote infer rules giving the code of the corresponding type in the smallest universe possible. However this is only needed&lt;br&gt;&#xA;for the &amp;rsquo;let&amp;rsquo; case, so maybe this is ok.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>4th Week</title>
       <link>http://localhost:1313/posts/4th-week/</link>
       <pubDate>Sun, 01 Mar 2026 18:07:33 +0000</pubDate>
       <guid>http://localhost:1313/posts/4th-week/</guid>
-      <description>&lt;h1 id=&#34;starting-to-write-a-paper&#34;&gt;Starting to write a paper&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;m glad to say that I started working on a paper with Jon, which will cover some of the stuff written here and aiming&#xA;at clarifying the state of affairs when it comes to cumulative hierarchies of universes in dependent type theory and&#xA;proof assistants, with a focus on both theoretical and practical aspects.&lt;/p&gt;&#xA;&lt;p&gt;This work will partially use ideas from my previous internship with Thierry Coquand focusing on the equivalence between&#xA;Tarski and Russell universe, work I will be presenting at TYPES 2026 this year.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;starting-to-write-a-paper&#34;&gt;Starting to write a paper&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;m glad to say that I started working on a paper with Jon, which will cover some of the stuff written here and aiming&#xA;at clarifying the state of affairs when it comes to cumulative hierarchies of universes in dependent type theory and&#xA;proof assistants, with a focus on both theoretical and practical aspects.&lt;/p&gt;&#xA;&lt;p&gt;This work will partially use ideas from my previous internship focusing on the equivalence between&#xA;Tarski and Russell universe, work I will be presenting at TYPES 2026 this year.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Third week</title>
