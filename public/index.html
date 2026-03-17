@@ -49,8 +49,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Raphaël Sterbac Blog">
-  <meta itemprop="datePublished" content="2026-03-10T09:44:43+00:00">
-  <meta itemprop="dateModified" content="2026-03-10T09:44:43+00:00">
+  <meta itemprop="datePublished" content="2026-03-17T08:59:32+00:00">
+  <meta itemprop="dateModified" content="2026-03-17T08:59:32+00:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Raphaël Sterbac Blog">
 
@@ -115,6 +115,34 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/6th-week/" class="color-inherit dim link">
+            6th Week
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <h1 id="implementing-the-fuss-free-hierarchy">Implementing the Fuss-Free hierarchy</h1>
+<p>I have been continuing my implementation of the fuss-free hierarchy this week,
+Last week, I added synthesis rule for Pi and U, but that is not necessary if we write another function &lsquo;checkTy&rsquo; which corresponds
+to a new judgment in the bidirectional typing algorithm, which checks a term against Type. We can also add an optional size to
+this judgement, which tells the elaborator to check it against $Small_i$ and produces a small type. I have implemented all of that,
+and it seems to be working! I still need to put my implementation to more tests though.</p>
+        </div>
+        <a href="/posts/6th-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="w-100 mb4 relative">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l dark-gray no-underline">
+    <div class="flex-column flex-row-ns flex">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/5th-week/" class="color-inherit dim link">
             5th Week
             </a>
@@ -167,43 +195,18 @@ Tarski and Russell universe, work I will be presenting at TYPES 2026 this year.<
 
           </div>
         
-          <div class="w-100 mb4 relative">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l dark-gray no-underline">
-    <div class="flex-column flex-row-ns flex">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/third-week/" class="color-inherit dim link">
-            Third week
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <h1 id="equivalence-between-fuss-free-and-tarksi">Equivalence between Fuss-Free and Tarksi</h1>
-<p>When showing that we can translate from a strict Tarski hierarchy to the Fuss-free
-formulation, we can&rsquo;t define $Small_i$ as a proper type internally. To solve this issue,
-we can show this direction of the equivalence result by a semantics argument, showing
-that the syntactic category with family (CwF) $\mathcal{T}_T$ of the strict Tarski theory
-is a model of the fuss-free hierarchy. To do this, we define $Small_i$ as the characteristic
-map of the monomorphism $\text{El}_i$. Then, this satisfies the smallness rules of the fuss-free formulation,
-and we can define the coding map as a pullback map of the cartesian square defining the characteristic map $\text{Small}_i$.
-So now the equivalence result is completely proven!</p>
-        </div>
-        <a href="/posts/third-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
         <section class="w-100">
           <h1 class="f3">More</h1>
           
+          
+            <h2 class="f5 fw4 mb4 dib mr3">
+              <a href="/posts/third-week/" class="link black dim">
+                Third week
+              </a>
+            </h2>
           
             <h2 class="f5 fw4 mb4 dib mr3">
               <a href="/posts/second-week/" class="link black dim">

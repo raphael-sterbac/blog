@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Raphaël Sterbac Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Mar 2026 09:44:43 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 08:59:32 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>6th Week</title>
+      <link>http://localhost:1313/posts/6th-week/</link>
+      <pubDate>Tue, 17 Mar 2026 08:59:32 +0000</pubDate>
+      <guid>http://localhost:1313/posts/6th-week/</guid>
+      <description>&lt;h1 id=&#34;implementing-the-fuss-free-hierarchy&#34;&gt;Implementing the Fuss-Free hierarchy&lt;/h1&gt;&#xA;&lt;p&gt;I have been continuing my implementation of the fuss-free hierarchy this week,&#xA;Last week, I added synthesis rule for Pi and U, but that is not necessary if we write another function &amp;lsquo;checkTy&amp;rsquo; which corresponds&#xA;to a new judgment in the bidirectional typing algorithm, which checks a term against Type. We can also add an optional size to&#xA;this judgement, which tells the elaborator to check it against $Small_i$ and produces a small type. I have implemented all of that,&#xA;and it seems to be working! I still need to put my implementation to more tests though.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>5th Week</title>
       <link>http://localhost:1313/posts/5th-week/</link>
