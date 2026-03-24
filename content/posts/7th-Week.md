@@ -1,6 +1,5 @@
 +++
 date = '2026-03-22T16:33:36Z'
-draft = true
 title = '7th Week'
 math = true
 +++
