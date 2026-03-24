@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>7th Week | Raphaël Sterbac Blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Formulating natural universe hierarchies
+I&rsquo;ve been working on finding a concise way to formulate the natural universe hierarchy,
+such that all the structural rules follow from functoriality and naturality condition. The idea
+is to work in a logical framework to specify the signature of our theory in a categorical way. This
+was a lot of fun ! Maybe there are also interesting ideas to get from the paper A Generalized Algebraic
+Theory for Type Theory with Explicit Universe Polymorphism, that I should probably try to read at some point.">
+    <meta name="generator" content="Hugo 0.155.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/7th-week/">
+    
+
+    
+    
+    <meta property="og:url" content="http://localhost:1313/posts/7th-week/">
+  <meta property="og:site_name" content="Raphaël Sterbac Blog">
+  <meta property="og:title" content="7th Week">
+  <meta property="og:description" content="Formulating natural universe hierarchies I’ve been working on finding a concise way to formulate the natural universe hierarchy, such that all the structural rules follow from functoriality and naturality condition. The idea is to work in a logical framework to specify the signature of our theory in a categorical way. This was a lot of fun ! Maybe there are also interesting ideas to get from the paper A Generalized Algebraic Theory for Type Theory with Explicit Universe Polymorphism, that I should probably try to read at some point.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-22T16:33:36+00:00">
+    <meta property="article:modified_time" content="2026-03-22T16:33:36+00:00">
+
+  <meta itemprop="name" content="7th Week">
+  <meta itemprop="description" content="Formulating natural universe hierarchies I’ve been working on finding a concise way to formulate the natural universe hierarchy, such that all the structural rules follow from functoriality and naturality condition. The idea is to work in a logical framework to specify the signature of our theory in a categorical way. This was a lot of fun ! Maybe there are also interesting ideas to get from the paper A Generalized Algebraic Theory for Type Theory with Explicit Universe Polymorphism, that I should probably try to read at some point.">
+  <meta itemprop="datePublished" content="2026-03-22T16:33:36+00:00">
+  <meta itemprop="dateModified" content="2026-03-22T16:33:36+00:00">
+  <meta itemprop="wordCount" content="695">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="7th Week">
+  <meta name="twitter:description" content="Formulating natural universe hierarchies I’ve been working on finding a concise way to formulate the natural universe hierarchy, such that all the structural rules follow from functoriality and naturality condition. The idea is to work in a logical framework to specify the signature of our theory in a categorical way. This was a lot of fun ! Maybe there are also interesting ideas to get from the paper A Generalized Algebraic Theory for Type Theory with Explicit Universe Polymorphism, that I should probably try to read at some point.">
+
+	
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js" integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
+
+
+  </head><body class="ma0 avenir bg-near-white development is-page is-page page-7th-Week">
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Raphaël Sterbac Blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+
+  <article class="page-7th-Week flex-l mw7 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">7th Week</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2026-03-22T16:33:36Z">March 22, 2026</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><h1 id="formulating-natural-universe-hierarchies">Formulating natural universe hierarchies</h1>
+<p>I&rsquo;ve been working on finding a concise way to formulate the <em>natural</em> universe hierarchy,
+such that all the structural rules follow from functoriality and naturality condition. The idea
+is to work in a logical framework to specify the signature of our theory in a categorical way. This
+was a lot of fun ! Maybe there are also interesting ideas to get from the paper <em>A Generalized Algebraic
+Theory for Type Theory with Explicit Universe Polymorphism</em>, that I should probably try to read at some point.</p>
+<p>In the end, the formulation is quite concise : our universe hierarchy is a functor from the category of levels $\mathbb{L}$ to
+the &ldquo;polynomial category&rdquo; associated with our representable map $\pi : \mathsf{Tm} \rightarrow \mathsf{Ty}$. Then, codes $\Pi^\bullet$ and $u_\bullet^\bullet$
+are simply natural transformations between well-chosen functors that embeds their input. With this, we recover the structural equations
+by unfolding the definition : we get a map along with a coherence diagram and a naturality diagram.</p>
+<p>Now I could start thinking on how to formulate the Fuss-Free hierarchy in this way, or also try to phrase the Sconing proof for normalization.</p>
+<h1 id="postponed-casts-and-unification">Postponed casts and unification</h1>
+<p>This week, I&rsquo;ve also been thinking about handling implicit coercions and unification properly. The heart of
+the problem is <em>scheduling</em>: making progress on unification can solve a postponed coercion problem, and vice versa.
+Andras Kovacs last talk at WITS 2026 present an algorithm that aims at handling more of those postponed unification problem,
+using ideas from observational type theory.</p>
+<p>That is already a step towards a more reliable unification, but it would be still unreliable when coupled with implicit coercions.
+One idea is that instead of having conflicting coercion <em>and</em> unification mechanism, we would want to have only one algorithm to handle
+both at the same time.</p>
+<p>I think that this idea is also related to the paper &ldquo;AdapTT: Functoriality for Dependent Type Casts&rdquo;, which presents a unified framework
+for <em>both</em> subtyping and OTT&rsquo;s coercion mechanism! Then, one good idea would be to generalise Andras&rsquo; algorithm to produce general <em>coercion problems</em>,
+which would try to coerce from one type to another (using cumulativity/subtyping), and inferring more information on the structure of the type we are
+coercing. This process should ultimately produce a unification problem if such a coercion couldn&rsquo;t be found.</p>
+<p>I was also re-reading the related post on this topic, and came across this previous post on Mastodon:</p>
+<blockquote>
+<ol>
+<li><em>Types</em> should not be subject to unification, but rather to resolution of coercions.</li>
+<li><em>Terms</em> are subject to unification.</li>
+</ol>
+<p>Of course, many types are of the form el(A) when A:U is a term of universe type. The principles above give us a pretty simple rule of thumb: the coercions from el(A) to el(B) for neutral A and B must always be identities, induced by a definitional equality between A and B. This means, in short, that we should call the unifier HERE but NOT when A,B are headed by a constructor.</p>
+</blockquote>
+<p>This is quite funnily related to our Fuss-Free hierarchy and its injective decoding map ! I&rsquo;m still unsure of what to say from all of this. But to me,
+the fact the core of the problem is <em>postponing</em>, and that Andras deal with it using observational equality, which is in the end a casting mechanism, should
+indicate that extending the algorithm with a general &ldquo;adapter&rdquo; may be a good idea (using AdapTT terminology).</p>
+<p>I am not proposing to use full structural and functorial rules such as what is done in AdapTT, and I think this would be dangerous.
+We should restrict ourselves on a casting mechanism which is functorial only on negative types, and surely not on parametrised inductives like list for example.
+One question that arises is now : how does that behave with universe hierarchies ?</p>
+<p>To summarize, I think that this is really going in the good direction! We would still need to see how it behaves in practice,
+as those posponement issues are hard to evaluate without implementing the thing in a real system. I&rsquo;ve started to read both Andras'
+and Pterodactyl code, and I will try to start adding this algorithm to my implementation at some point.</p>
+<ul class="pa0">
+  
+</ul>
+
+      
+    </div></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  Raphaël Sterbac Blog 2026 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -6,8 +6,15 @@
     <description>Recent content on Raphaël Sterbac Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Mar 2026 08:59:32 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2026 16:33:36 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>7th Week</title>
+      <link>http://localhost:1313/posts/7th-week/</link>
+      <pubDate>Sun, 22 Mar 2026 16:33:36 +0000</pubDate>
+      <guid>http://localhost:1313/posts/7th-week/</guid>
+      <description>&lt;h1 id=&#34;formulating-natural-universe-hierarchies&#34;&gt;Formulating natural universe hierarchies&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been working on finding a concise way to formulate the &lt;em&gt;natural&lt;/em&gt; universe hierarchy,&#xA;such that all the structural rules follow from functoriality and naturality condition. The idea&#xA;is to work in a logical framework to specify the signature of our theory in a categorical way. This&#xA;was a lot of fun ! Maybe there are also interesting ideas to get from the paper &lt;em&gt;A Generalized Algebraic&#xA;Theory for Type Theory with Explicit Universe Polymorphism&lt;/em&gt;, that I should probably try to read at some point.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>6th Week</title>
       <link>http://localhost:1313/posts/6th-week/</link>
