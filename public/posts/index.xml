@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Raphaël Sterbac Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Mar 2026 16:33:36 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2026 09:55:03 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>8th Week</title>
+      <link>http://localhost:1313/posts/8th-week/</link>
+      <pubDate>Tue, 31 Mar 2026 09:55:03 +0100</pubDate>
+      <guid>http://localhost:1313/posts/8th-week/</guid>
+      <description>&lt;h1 id=&#34;postponed-casts-and-unification&#34;&gt;Postponed casts and unification&lt;/h1&gt;&#xA;&lt;p&gt;Last week, I continued reading about pattern unification and tried to figure things out by reading Andras&#39;&#xA;code for &amp;ldquo;Observing definitional equality&amp;rdquo;. I am slowly trying to integrate it to my code, but for now this&#xA;is clearly at an early stage, and I am a bit struggling to figure things out from Andras&amp;rsquo; code as there is a lot&#xA;going on there, with a lot of features implemented all at once. I will continue working on this more thoroughly this week.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>7th Week</title>
       <link>http://localhost:1313/posts/7th-week/</link>
