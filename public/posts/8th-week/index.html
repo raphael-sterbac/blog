@@ -55,7 +55,7 @@ going on there, with a lot of features implemented all at once. I will continue 
   <meta itemprop="description" content="Postponed casts and unification Last week, I continued reading about pattern unification and tried to figure things out by reading Andras&#39; code for “Observing definitional equality”. I am slowly trying to integrate it to my code, but for now this is clearly at an early stage, and I am a bit struggling to figure things out from Andras’ code as there is a lot going on there, with a lot of features implemented all at once. I will continue working on this more thoroughly this week.">
   <meta itemprop="datePublished" content="2026-03-31T09:55:03+01:00">
   <meta itemprop="dateModified" content="2026-03-31T09:55:03+01:00">
-  <meta itemprop="wordCount" content="493">
+  <meta itemprop="wordCount" content="517">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="8th Week">
   <meta name="twitter:description" content="Postponed casts and unification Last week, I continued reading about pattern unification and tried to figure things out by reading Andras&#39; code for “Observing definitional equality”. I am slowly trying to integrate it to my code, but for now this is clearly at an early stage, and I am a bit struggling to figure things out from Andras’ code as there is a lot going on there, with a lot of features implemented all at once. I will continue working on this more thoroughly this week.">
@@ -149,7 +149,8 @@ equations easily using the framework of AdapTT.</p>
 only rule to add is the closure under smallness !</p>
 <p>This means that we could take advantage of this to allow the user to write something like <code>t : UserDefinedType(...)@small(i)</code>
 which would mean that we want a term of the associated small type. This was already the kind of things that were presented in the original blogpost with the theory of small categories,
-but I think we had deviated a bit from this original idea.</p>
+but I think we had deviated a bit from this original idea. Of course, the fuss-free hierarchy adds nothing that we were not able to do before,
+but makes the presentation (and implementation) a lot simpler.</p>
 <p>In a similar way, our naturality definitions for the natural hierarchy should extend for all new types. Maybe we could emphasize this
 in the paper : we only need to add the natural transformation \[ (\mathsf{input},\lambda\ \mathsf{input}. \ \mathsf{constructor}(\mathsf{input})) \Rightarrow (El(U_\bullet),El_\bullet) \]
 for each new type.</p>

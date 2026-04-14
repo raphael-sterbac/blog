@@ -6,8 +6,22 @@
     <description>Recent content in Posts on Raphaël Sterbac Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Mar 2026 09:55:03 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 10:17:24 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>10th Week</title>
+      <link>http://localhost:1313/posts/10th-week/</link>
+      <pubDate>Tue, 14 Apr 2026 10:17:24 +0100</pubDate>
+      <guid>http://localhost:1313/posts/10th-week/</guid>
+      <description>&lt;h1 id=&#34;elaboration-of-cumulative-universes&#34;&gt;Elaboration of cumulative universes&lt;/h1&gt;&#xA;&lt;p&gt;This week, I have been reviewing the rules I had written a while ago for the elaboration to the Fuss-Free hierarchy. Those&#xA;rules had evolved quite a bit over the past few months, as we introduced an explicit casting mechanism to get rid of the problems&#xA;related with unification. However, now that we went back to a system with no explicit casts, and with the experience of implementing&#xA;the elaboration in practice, I think that we needed to revisit the rules.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>9th Week</title>
+      <link>http://localhost:1313/posts/9th-week/</link>
+      <pubDate>Tue, 07 Apr 2026 10:57:04 +0100</pubDate>
+      <guid>http://localhost:1313/posts/9th-week/</guid>
+      <description>&lt;h1 id=&#34;normalisation-by-sconing&#34;&gt;Normalisation by Sconing&lt;/h1&gt;&#xA;&lt;p&gt;This week, I have been mostly up to understanding relative induction principles and sconing. The related&#xA;papers are quite interesting, and this clarified a lot of stuff related to gluing and GATs for me. Then,&#xA;I wrote the proof of normalisation for the natural hierarchy using this technique. This took me a few days,&#xA;but it was not that difficult and simplified \textit{a lot} of things in the end, at least in comparison to&#xA;the kind of proof I was used to.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>8th Week</title>
       <link>http://localhost:1313/posts/8th-week/</link>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>9th Week | Raphaël Sterbac Blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Normalisation by Sconing
+This week, I have been mostly up to understanding relative induction principles and sconing. The related
+papers are quite interesting, and this clarified a lot of stuff related to gluing and GATs for me. Then,
+I wrote the proof of normalisation for the natural hierarchy using this technique. This took me a few days,
+but it was not that difficult and simplified \textit{a lot} of things in the end, at least in comparison to
+the kind of proof I was used to.">
+    <meta name="generator" content="Hugo 0.157.0">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/9th-week/">
+    
+
+    
+    
+    <meta property="og:url" content="http://localhost:1313/posts/9th-week/">
+  <meta property="og:site_name" content="Raphaël Sterbac Blog">
+  <meta property="og:title" content="9th Week">
+  <meta property="og:description" content="Normalisation by Sconing This week, I have been mostly up to understanding relative induction principles and sconing. The related papers are quite interesting, and this clarified a lot of stuff related to gluing and GATs for me. Then, I wrote the proof of normalisation for the natural hierarchy using this technique. This took me a few days, but it was not that difficult and simplified \textit{a lot} of things in the end, at least in comparison to the kind of proof I was used to.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-07T10:57:04+01:00">
+    <meta property="article:modified_time" content="2026-04-07T10:57:04+01:00">
+
+  <meta itemprop="name" content="9th Week">
+  <meta itemprop="description" content="Normalisation by Sconing This week, I have been mostly up to understanding relative induction principles and sconing. The related papers are quite interesting, and this clarified a lot of stuff related to gluing and GATs for me. Then, I wrote the proof of normalisation for the natural hierarchy using this technique. This took me a few days, but it was not that difficult and simplified \textit{a lot} of things in the end, at least in comparison to the kind of proof I was used to.">
+  <meta itemprop="datePublished" content="2026-04-07T10:57:04+01:00">
+  <meta itemprop="dateModified" content="2026-04-07T10:57:04+01:00">
+  <meta itemprop="wordCount" content="563">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="9th Week">
+  <meta name="twitter:description" content="Normalisation by Sconing This week, I have been mostly up to understanding relative induction principles and sconing. The related papers are quite interesting, and this clarified a lot of stuff related to gluing and GATs for me. Then, I wrote the proof of normalisation for the natural hierarchy using this technique. This took me a few days, but it was not that difficult and simplified \textit{a lot} of things in the end, at least in comparison to the kind of proof I was used to.">
+
+	
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js" integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
+
+
+  </head><body class="ma0 avenir bg-near-white development is-page is-page page-9th-week">
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Raphaël Sterbac Blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+
+  <article class="page-9th-week flex-l mw7 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">9th Week</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2026-04-07T10:57:04+01:00">April 7, 2026</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><h1 id="normalisation-by-sconing">Normalisation by Sconing</h1>
+<p>This week, I have been mostly up to understanding relative induction principles and sconing. The related
+papers are quite interesting, and this clarified a lot of stuff related to gluing and GATs for me. Then,
+I wrote the proof of normalisation for the natural hierarchy using this technique. This took me a few days,
+but it was not that difficult and simplified \textit{a lot} of things in the end, at least in comparison to
+the kind of proof I was used to.</p>
+<p>Yesterday, I found out about Rafael Bocquet&rsquo;s PhD thesis which generalises the paper &ldquo;For the metatheory of
+types, internal sconing is enough&rdquo; to any SOGAT. This would allow us to cite this thesis and get the exact
+relative induction principle from it, without having the need to say an imprecise thing like :</p>
+<blockquote>
+<p>&ldquo;The constructions of Bocquet et al. [10] extend to S, and we notably get the relative induction principle [&hellip;]&rdquo;.</p>
+</blockquote>
+<p>He also provides a more detailed example of normalisation for MLTT with a cummulative hierarchy of universes. He uses
+universes à la Coquand, so this is still different from our setting, but this allowed me to compare his proof with mine and
+see if we did similar things. This was indeed the case, and thus the proof must be good. However, I think that it still needs
+more clarity and more reading so that there is no typo or anything that could lead the reader to not understand something.</p>
+<h1 id="implementation">Implementation</h1>
+<p>As discussed last week, I reverted back my implementation to a simpler version where there was no pattern unification. I will
+need to put my code to more tests to see uf there are not any bugs that could have been introduced in the process, as I also
+removed the explicit casting. I kept the version with pattern unification in a separate file <code>Unification.hs</code>, and I would be
+still interested to try implementing the postponement of casting at some point.</p>
+<p>However, maybe it would make more sense to implement it in Pterodactyl itself in that case ? As this is something we need
+to put to the test in practice, it would make sense to add it to a real system to see how it would behave, whereas it would
+be more complicated in a minimal implementation like mine. I don&rsquo;t know if I said this before but I had tried to provide some kind
+of elaboration rules for this mechanism, which are in my notes. That was only a sketch though.</p>
+<p>I&rsquo;ve also seen the progress on the side of patterns for Pterodactyl, and the working examples in general. It looks amazing ! I will
+also try to read a bit more about patterns and the implementation this week.</p>
+<h1 id="cummulativity-in-toposes">Cummulativity in toposes</h1>
+<p>Last week, I was trying to understand why cumulativity would fail in Mike Schulman&rsquo;s 2019 construction, and more precisely
+trying to figure out why constructing a mono pointwise by looking closely (and maybe adapting a bit) the small object argument would not work.
+In the end it seems that this may work, and now I am somehow convinced that it should work. I had worked out some of the details on paper last
+week, yet it would be a real challenge to write the thing down properly. I may try to do it at some point, but probably not in the near future.</p>
+<ul class="pa0">
+  
+</ul>
+
+      
+    </div></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  Raphaël Sterbac Blog 2026 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
