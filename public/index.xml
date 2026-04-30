@@ -6,8 +6,15 @@
     <description>Recent content on Raphaël Sterbac Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2026 10:17:24 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 22:01:31 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>12th Week</title>
+      <link>http://localhost:1313/posts/12th-week/</link>
+      <pubDate>Wed, 29 Apr 2026 22:01:31 +0100</pubDate>
+      <guid>http://localhost:1313/posts/12th-week/</guid>
+      <description>&lt;h1 id=&#34;the-fuss-free-hierarchy-and-more-general-types&#34;&gt;The Fuss-Free hierarchy and more general types&lt;/h1&gt;&#xA;&lt;p&gt;I have been reflecting about the Fuss-Free hierarchy and how to use it on general Inductives, or&#xA;even on user defined types. My original idea was to allow the user to do things like $\mathsf{UserDefinedType}(&amp;hellip;)@i$ to indicate&#xA;that we are asking for the corresponding small type, which we can elaborate in the fuss-free hierarchy by coding and decoding.&#xA;For instance, if we define a type of lists, then $\mathsf{List}(A)@i$ is a small type, given that $A$ is one. Pushing this further,&#xA;we can effectively do this for virtually &lt;em&gt;any&lt;/em&gt; type, and we only have to add the corresponding rule for closure under smallness, which&#xA;mimicks the formation rule with the smallness predicate instead of the well-formed type judgement.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>10th Week</title>
       <link>http://localhost:1313/posts/10th-week/</link>

@@ -49,8 +49,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Posts">
-  <meta itemprop="datePublished" content="2026-04-14T10:17:24+01:00">
-  <meta itemprop="dateModified" content="2026-04-14T10:17:24+01:00">
+  <meta itemprop="datePublished" content="2026-04-29T22:01:31+01:00">
+  <meta itemprop="dateModified" content="2026-04-29T22:01:31+01:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Posts">
 
@@ -94,6 +94,30 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links mid-gray"></section>
     <section class="flex-ns mt5 flex-wrap justify-around">
+      
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/12th-week/" class="link black dim">
+        12th Week
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h1 id="the-fuss-free-hierarchy-and-more-general-types">The Fuss-Free hierarchy and more general types</h1>
+<p>I have been reflecting about the Fuss-Free hierarchy and how to use it on general Inductives, or
+even on user defined types. My original idea was to allow the user to do things like $\mathsf{UserDefinedType}(&hellip;)@i$ to indicate
+that we are asking for the corresponding small type, which we can elaborate in the fuss-free hierarchy by coding and decoding.
+For instance, if we define a type of lists, then $\mathsf{List}(A)@i$ is a small type, given that $A$ is one. Pushing this further,
+we can effectively do this for virtually <em>any</em> type, and we only have to add the corresponding rule for closure under smallness, which
+mimicks the formation rule with the smallness predicate instead of the well-formed type judgement.</p>
+    </div>
+    <a href="/posts/12th-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
       
         <div class="w-100 w-30-l mb4 relative bg-white">
           <div class="w-100 mb4 nested-copy-line-height relative bg-white">
@@ -304,31 +328,6 @@ help after all. The smallness judgement and code for type connective can be elab
 downsides with the smalness judgement needing a mode switch and being not needed anyway.</p>
     </div>
     <a href="/posts/second-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="w-100 w-30-l mb4 relative bg-white">
-          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
-  <div class="mb3 pa4 gray overflow-hidden bg-white">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/first-week-02-feb/" class="link black dim">
-        First Week
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h1 id="subtyping-and-parametrised-inductive-types">Subtyping and Parametrised Inductive Types</h1>
-<p>On Tuesday, which was my first proper day, I focused on the potential issues we could
-encounter when adding structural subtyping and Parametrised Inductive types. A typical
-and pathological example of the latter is the list datatype $\text{List}(A)$.</p>
-<p>If we allow the user to deduce $l : \text{List}(U_{i+1})$ from $l : \text{List}(U_{i})$,
-then we would also have both $nil_{i} : \text{List}(U_{i+1})$ and $nil_{i+1} : \text{List}(U_{i+1})$.
-However, we wouldn&rsquo;t have $nil_{i}  = nil_{i+1}$, unless we add the equation. This breaks canonicity
-for inductive types, and could lead to weird error messages on the user-side such as <code>Could not unify nil and nil</code>.</p>
-    </div>
-    <a href="/posts/first-week-02-feb/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
