@@ -23,7 +23,9 @@ from Conor McBride's TYPES21 abstract entitled "Functorial Adapters".
 In our setting, we only ask for functoriality on negative types to preserve a good behaviour with unification, but we could easily extend this operation to have 
 functoriality on more types ! This is exactly what the paper "AdapTT: Functoriality for Dependent Type Casts" does, but the machinery
 is quite complicated. I have tried to see if the Fuss-Free hierarchy would help in any way but this is not likely, and I think rather
-orthogonal. Basically, what we would need is a new rule for `coe` that propagates the coercion functorially on the arguments of an inductive. The paper of Adjedj et al. deals
+orthogonal.
+
+Basically, what we would need is a new rule for `coe` that propagates the coercion functorially on the arguments of an inductive. The paper of Adjedj et al. deals
 with the really general case of a any functorial casts, but here our coercions are only a meta-operation that will be implemented as a funciton during elaboration, so maybe
 there is still something to say there. For instance, when writing the functoriality rules for lists, we get a "directed" version of the rules they derive :
 \\[ \mathsf{coe}\ \mathsf{nil}_A : A \Rightarrow B \rightsquigarrow \mathsf{nil}_B \\]
