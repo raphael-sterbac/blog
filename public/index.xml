@@ -6,8 +6,15 @@
     <description>Recent content on Raphaël Sterbac Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Apr 2026 22:01:31 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 09:39:21 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>14th Week</title>
+      <link>http://localhost:1313/posts/14th-week/</link>
+      <pubDate>Tue, 12 May 2026 09:39:21 +0100</pubDate>
+      <guid>http://localhost:1313/posts/14th-week/</guid>
+      <description>&lt;h1 id=&#34;writing-the-paper&#34;&gt;Writing the paper&lt;/h1&gt;&#xA;&lt;p&gt;I have started writing the extension to other types for the elaboration section, starting with&#xA;sigma types and lists. I am not sure how to continue after this, an approach could be to use the W-types&#xA;encoding to have a simple presentation, but with this approach we do not bring home the main advantage of the&#xA;Fuss-Free presentation, which can deal with user-defined inductives in all generality. The issue is that introducing&#xA;a theory of signatures and everything would take too much space, and diverges from the point we are making at presenting&#xA;a simplifying approach. Maybe presenting the example of W-types formally and then discussing informally a more general approach&#xA;to inductive types would be a good balance ?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>12th Week</title>
       <link>http://localhost:1313/posts/12th-week/</link>
