@@ -7,10 +7,10 @@ title = '16th Week'
 # Implementing Datatype Descriptions
 
 This week, I have been implementing Dagand's datatype descriptions in my minimal implementation of the Fuss-Free hierarchy. This has
-been a lot of fun, and I think I have set up evrything so that the last step remaining is the actual elaboration from the inductive definitions
+been a lot of fun, and I think I have set up everything so that the last step remaining is the actual elaboration from the inductive definitions
 written by the user to the core language with datatypes descriptions. This is described in chapter 7 of Dagand's thesis, but this will be the part
 where I need to be a bit careful with the universes. This will be a bit tricky, but with a bit of care I would be able to finish this in a few days
-of focusing. 
+of focus. 
 
 This implementation has also been a good excuse to read more carefully some part of the thesis I had skimmed before, and this was quite insightful.
 I am now wondering why this approach is not more widely known ! Notably, I now think that presenting datatype descriptions internally
@@ -32,21 +32,24 @@ I have also been working a bit on the writing of the paper. I notably tried to s
 One thing that I have also realised by reading Timany-Jacobs and Timany-Sozeau is that they insist quite a lot on the theory of categories (which is not even inductive). The reason is that in their framework with no top-level
 of types, the theory of categories should be universe-polymorphic from the beginning:
 
-` Record Category@{i j} :=
-{ Obj : Type\[@{i}; Hom : Obj → Obj → Type@{j}; . . . }. (* local constraints: ∅ *) `
+```
+Record Category@{i j} :=
+{ Obj : Type\[@{i}; Hom : Obj → Obj → Type@{j}; . . . }. (* local constraints: ∅ *) ```
 
 This means that we are actually only working on small categories, and that small categories are just really *relatively small* categories:
 
-`Definition Cat@{i j k l} : Category@{i j} :=
-{ Obj : Category@{k l}; . . . }. (* local constr.: {k < i, l < i, k ≤ j, l ≤ j} *)`
+```
+Definition Cat@{i j k l} : Category@{i j} :=
+{ Obj : Category@{k l}; . . . }. (* local constr.: {k < i, l < i, k ≤ j, l ≤ j} *)```
 
 As said in the original blogpost for the Fuss-Free universes, there is really no need for size constraints in the definition of categories... And the most reasonable place where you would need to do so
 is when you need to consider the bicategory of categories or things like that... Thus, one other good thing about the fuss-free hierarchy is that we retain the top-level of types, allowing us to write: 
 
-`theory Category where
+```
+theory Category where
   ob: Type
   hom: ob -> ob -> Type
-  // operations and axioms...`
+  // operations and axioms...```
 
 And then, specify it to the theory of small categories if needed. There, the fuss-free hierarchy does not really play any important role, as we cannot express the theory of small categories in term of the smallness judgement (and shouldn't anyway).
 However, this story for categories can also be done for any inductive. For instance for lists: in Timany-Sozeau they only have small lists (for the same reasons) and make them universe polymorphic such that they ask for the equations $\mathsf{nil}_i = \mathsf{nil}_j$ etc..
