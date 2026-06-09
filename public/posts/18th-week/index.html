@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>18th Week | Raphaël Sterbac Blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Implementing Datatype Descriptions
+Other the past week while I was in Denmark, I continued my implementation of Dagand&rsquo;s datatype descriptions and I managed to end up with something
+that seem to be working ! It allows the user to write code like this:
+data Nat : U 0 where {
+  zero : Nat ;
+  succ : Nat -&gt; Nat
+} ;
+that gets elaborated in terms of Dagand&rsquo;s descriptions, extension functor etc&hellip; It also generates the eliminator such that you can write recursive programs like this:">
+    <meta name="generator" content="Hugo 0.161.1">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/18th-week/">
+    
+
+    
+    
+    <meta property="og:url" content="http://localhost:1313/posts/18th-week/">
+  <meta property="og:site_name" content="Raphaël Sterbac Blog">
+  <meta property="og:title" content="18th Week">
+  <meta property="og:description" content="Implementing Datatype Descriptions Other the past week while I was in Denmark, I continued my implementation of Dagand’s datatype descriptions and I managed to end up with something that seem to be working ! It allows the user to write code like this:
+data Nat : U 0 where { zero : Nat ; succ : Nat -&gt; Nat } ; that gets elaborated in terms of Dagand’s descriptions, extension functor etc… It also generates the eliminator such that you can write recursive programs like this:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-09T09:22:39+01:00">
+    <meta property="article:modified_time" content="2026-06-09T09:22:39+01:00">
+
+  <meta itemprop="name" content="18th Week">
+  <meta itemprop="description" content="Implementing Datatype Descriptions Other the past week while I was in Denmark, I continued my implementation of Dagand’s datatype descriptions and I managed to end up with something that seem to be working ! It allows the user to write code like this:
+data Nat : U 0 where { zero : Nat ; succ : Nat -&gt; Nat } ; that gets elaborated in terms of Dagand’s descriptions, extension functor etc… It also generates the eliminator such that you can write recursive programs like this:">
+  <meta itemprop="datePublished" content="2026-06-09T09:22:39+01:00">
+  <meta itemprop="dateModified" content="2026-06-09T09:22:39+01:00">
+  <meta itemprop="wordCount" content="733">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="18th Week">
+  <meta name="twitter:description" content="Implementing Datatype Descriptions Other the past week while I was in Denmark, I continued my implementation of Dagand’s datatype descriptions and I managed to end up with something that seem to be working ! It allows the user to write code like this:
+data Nat : U 0 where { zero : Nat ; succ : Nat -&gt; Nat } ; that gets elaborated in terms of Dagand’s descriptions, extension functor etc… It also generates the eliminator such that you can write recursive programs like this:">
+
+	
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js" integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
+
+
+  </head><body class="ma0 avenir bg-near-white development is-page is-page page-18th-week">
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Raphaël Sterbac Blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+
+  <article class="page-18th-week flex-l mw7 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">18th Week</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2026-06-09T09:22:39+01:00">June 9, 2026</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><h1 id="implementing-datatype-descriptions">Implementing Datatype Descriptions</h1>
+<p>Other the past week while I was in Denmark, I continued my implementation of Dagand&rsquo;s datatype descriptions and I managed to end up with something
+that seem to be working ! It allows the user to write code like this:</p>
+<pre tabindex="0"><code>data Nat : U 0 where {
+  zero : Nat ;
+  succ : Nat -&gt; Nat
+} ;
+</code></pre><p>that gets elaborated in terms of Dagand&rsquo;s descriptions, extension functor etc&hellip; It also generates the eliminator such that you can write recursive programs like this:</p>
+<pre tabindex="0"><code>let add : Nat -&gt; Nat -&gt; Nat = \a b.
+  elimNat (\_. Nat)
+    &lt; \p ihs. b ,
+    &lt; \p ihs. succ (fst ihs) ,
+    * &gt; &gt;
+    a ;
+</code></pre><p>As expected, this was quite tricky, and I am still debugging things notably with how universe levels are handled. In fact, I made the sort of types representable just like in Pterodactyl,
+allowing the user to write large inductives with <code>Tp</code> everywhere instead of <code>U i</code>. For instance we can write code like this:</p>
+<pre tabindex="0"><code>data Nat : U 0 where {
+  zero : Nat ;
+  succ : Nat -&gt; Nat
+} ;
+
+data List (A : Tp) : Tp where {
+  nil : List A ;
+  cons : A -&gt; List A -&gt; List A
+} ;
+
+let TypeList : Tp = List (U 0) ;
+
+let types1 : TypeList = cons (U 0) Nat (nil (U 0)) ;
+
+let types2 : TypeList = cons (U 0) (List Nat) types1 ;
+
+let getHead : TypeList -&gt; U 0 = \l.
+  elimList (U 0) (\_. U 0)
+    &lt; \p ihs. Nat ,
+    &lt; \p ihs. fst p ,
+    * &gt; &gt;
+    l ;
+
+let mySmallList : getHead types2 = cons Nat zero (cons Nat (succ zero) (nil Nat)) ;
+</code></pre><p>I have implemented the smallness check in terms of the extension of the description, though I am not sure that
+this is the right way to do it for a practical implementation. It may be better to check smallness recursively on the description, I am not sure. In either case, what I implemented seem to be
+working quite well, and I have several working examples along with a few non-examples. I have even tried the implementation to do a tiny bit of category theory using inductives with one constructors
+in place of proper record types, and it seems to be working.</p>
+<h1 id="hottuf-and-writing-the-paper">HoTT/UF and Writing the paper</h1>
+<p>Last week, I also gave my talk at HoTT/UF and I think that it went quite well ! The feedback were quite positive,
+and was mostly consisting of &ldquo;this is a good approach, I wonder why nobody presented universes like that before !&rdquo;.</p>
+<p>One of the most important question I have got was if the approach relates to the new implementation of universe polymorphism
+implemented in Rocq, based on the paper of Bezem, Coquand, Dybjer and Escardo. Of course our approach is perfectly compatible
+to this work (actually we prove normalisation for it and use level judgements like they do !). I think that I did not put enough
+emphasis on this in my presentation but we should do so in the paper, and mention that this approach has been implemented in Rocq
+recently. I need to get back to writing, now that I have taken a step back and have a better idea of the global picture, with the implementation
+now being at a good stage.</p>
+<p>Another fun thing was that the <a href="https://hott-uf.github.io/2026/abstracts/HoTTUF_2026_paper_10.pdf">next talk</a> after me was about formalising category theory in Cubical Agda and faced many issues related to levels
+and universe polymorphism. Actually the talk even cited the original blogpost on Fuss-Free hierarchies ! This is the second time that this happends, with Owen Lynch also using the Fuss-Free approach in some way.
+He even expresses it in terms of modalities, described in his <a href="https://types2026.cse.chalmers.se/slides/34/7.html">slides</a>. I do not know if this formulation gives anything interesting, but it might be worth looking at.
+I have been recently wondering if it would be possible to express the Fuss-Free hierarchy as a kind of reflective localisation of the universes, which might be related to a formulation in terms of a modality. More concretely,
+the pair of the coding and decoding map looks like the adjoint functors of a reflective localisation, and actually the decoding map &ldquo;localises&rdquo; the universes in the sense that it sends lifts to equal types in a natural/functorial way.</p>
+<ul class="pa0">
+  
+</ul>
+
+      
+    </div></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  Raphaël Sterbac Blog 2026 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

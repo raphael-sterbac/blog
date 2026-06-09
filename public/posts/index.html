@@ -7,7 +7,7 @@
     <title>Raphaël Sterbac Blog</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.161.0">
+    <meta name="generator" content="Hugo 0.161.1">
     
     
     
@@ -49,8 +49,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Posts">
-  <meta itemprop="datePublished" content="2026-05-12T09:39:21+01:00">
-  <meta itemprop="dateModified" content="2026-05-12T09:39:21+01:00">
+  <meta itemprop="datePublished" content="2026-06-09T09:22:39+01:00">
+  <meta itemprop="dateModified" content="2026-06-09T09:22:39+01:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Posts">
 
@@ -94,6 +94,54 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links mid-gray"></section>
     <section class="flex-ns mt5 flex-wrap justify-around">
+      
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/18th-week/" class="link black dim">
+        18th Week
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h1 id="implementing-datatype-descriptions">Implementing Datatype Descriptions</h1>
+<p>Other the past week while I was in Denmark, I continued my implementation of Dagand&rsquo;s datatype descriptions and I managed to end up with something
+that seem to be working ! It allows the user to write code like this:</p>
+<pre tabindex="0"><code>data Nat : U 0 where {
+  zero : Nat ;
+  succ : Nat -&gt; Nat
+} ;
+</code></pre><p>that gets elaborated in terms of Dagand&rsquo;s descriptions, extension functor etc&hellip; It also generates the eliminator such that you can write recursive programs like this:</p>
+    </div>
+    <a href="/posts/18th-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/16th-week/" class="link black dim">
+        16th Week
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h1 id="implementing-datatype-descriptions">Implementing Datatype Descriptions</h1>
+<p>This week, I have been implementing Dagand&rsquo;s datatype descriptions in my minimal implementation of the Fuss-Free hierarchy. This has
+been a lot of fun, and I think I have set up everything so that the last step remaining is the actual elaboration from the inductive definitions
+written by the user to the core language with datatypes descriptions. This is described in chapter 7 of Dagand&rsquo;s thesis, but this will be the part
+where I need to be a bit careful with the universes. This will be a bit tricky, but with a bit of care I would be able to finish this in a few days
+of focus.</p>
+    </div>
+    <a href="/posts/16th-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
       
         <div class="w-100 w-30-l mb4 relative bg-white">
           <div class="w-100 mb4 nested-copy-line-height relative bg-white">
@@ -279,55 +327,6 @@ I wrote infer rules giving the code of the corresponding type in the smallest un
 for the &rsquo;let&rsquo; case, so maybe this is ok.</p>
     </div>
     <a href="/posts/5th-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="w-100 w-30-l mb4 relative bg-white">
-          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
-  <div class="mb3 pa4 gray overflow-hidden bg-white">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/4th-week/" class="link black dim">
-        4th Week
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h1 id="starting-to-write-a-paper">Starting to write a paper</h1>
-<p>I&rsquo;m glad to say that I started working on a paper with Jon, which will cover some of the stuff written here and aiming
-at clarifying the state of affairs when it comes to cumulative hierarchies of universes in dependent type theory and
-proof assistants, with a focus on both theoretical and practical aspects.</p>
-<p>This work will partially use ideas from my previous internship focusing on the equivalence between
-Tarski and Russell universe, work I will be presenting at TYPES 2026 this year.</p>
-    </div>
-    <a href="/posts/4th-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="w-100 w-30-l mb4 relative bg-white">
-          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
-  <div class="mb3 pa4 gray overflow-hidden bg-white">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/third-week/" class="link black dim">
-        Third week
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h1 id="equivalence-between-fuss-free-and-tarksi">Equivalence between Fuss-Free and Tarksi</h1>
-<p>When showing that we can translate from a strict Tarski hierarchy to the Fuss-free
-formulation, we can&rsquo;t define $Small_i$ as a proper type internally. To solve this issue,
-we can show this direction of the equivalence result by a semantics argument, showing
-that the syntactic category with family (CwF) $\mathcal{T}_T$ of the strict Tarski theory
-is a model of the fuss-free hierarchy. To do this, we define $Small_i$ as the characteristic
-map of the monomorphism $\text{El}_i$. Then, this satisfies the smallness rules of the fuss-free formulation,
-and we can define the coding map as a pullback map of the cartesian square defining the characteristic map $\text{Small}_i$.
-So now the equivalence result is completely proven!</p>
-    </div>
-    <a href="/posts/third-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 

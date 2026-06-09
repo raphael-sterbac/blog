@@ -6,8 +6,22 @@
     <description>Recent content on Raphaël Sterbac Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 May 2026 09:39:21 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 09:22:39 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>18th Week</title>
+      <link>http://localhost:1313/posts/18th-week/</link>
+      <pubDate>Tue, 09 Jun 2026 09:22:39 +0100</pubDate>
+      <guid>http://localhost:1313/posts/18th-week/</guid>
+      <description>&lt;h1 id=&#34;implementing-datatype-descriptions&#34;&gt;Implementing Datatype Descriptions&lt;/h1&gt;&#xA;&lt;p&gt;Other the past week while I was in Denmark, I continued my implementation of Dagand&amp;rsquo;s datatype descriptions and I managed to end up with something&#xA;that seem to be working ! It allows the user to write code like this:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;data Nat : U 0 where {&#xA;  zero : Nat ;&#xA;  succ : Nat -&amp;gt; Nat&#xA;} ;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;that gets elaborated in terms of Dagand&amp;rsquo;s descriptions, extension functor etc&amp;hellip; It also generates the eliminator such that you can write recursive programs like this:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>16th Week</title>
+      <link>http://localhost:1313/posts/16th-week/</link>
+      <pubDate>Tue, 26 May 2026 10:24:43 +0100</pubDate>
+      <guid>http://localhost:1313/posts/16th-week/</guid>
+      <description>&lt;h1 id=&#34;implementing-datatype-descriptions&#34;&gt;Implementing Datatype Descriptions&lt;/h1&gt;&#xA;&lt;p&gt;This week, I have been implementing Dagand&amp;rsquo;s datatype descriptions in my minimal implementation of the Fuss-Free hierarchy. This has&#xA;been a lot of fun, and I think I have set up everything so that the last step remaining is the actual elaboration from the inductive definitions&#xA;written by the user to the core language with datatypes descriptions. This is described in chapter 7 of Dagand&amp;rsquo;s thesis, but this will be the part&#xA;where I need to be a bit careful with the universes. This will be a bit tricky, but with a bit of care I would be able to finish this in a few days&#xA;of focus.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>14th Week</title>
       <link>http://localhost:1313/posts/14th-week/</link>
