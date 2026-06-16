@@ -9,7 +9,7 @@ title = '19th Week'
 Last week, I have continued working on my implementation, and this is now at a quite good stage. Notably, the source files are now structured
 and not monolithic as before, and I tried to refactor a bit my code so that it is more readable. I still have a few TODOs notably regarding the dataypes elaboration, for things
 that I am a bit unsure of, or that can probably be simplified. In fact, as this is the first time that this has been concretely implemented (and also the first
-time I implement such a big piece of type theory!), the code could surely be done in a better way. So this is not quite finished yet, but I am still quite happy with what the current result!
+time I implement such a big piece of type theory!), the code could surely be done in a better way. So this is not quite finished yet, but I am still quite happy with the current result!
 
 # Writing the paper
 
@@ -31,4 +31,7 @@ In the meantime, and in the evenings, I have been working on the draft of my ide
 the paper "Strict universes for Grothendieck toposes" to the construction of Schulman in $\infty$-toposes. This is also
 starting to get in pretty good shape and should be enough to have a good overview of the approach. Most of the proofs 
 of the results of the two papers that I need are left blank for now, but I gave a more precise version of the construction of
-Schulman, and constructed the appropriate monomorphisms between the universes. 
+Schulman, and constructed the appropriate monomorphisms between the universes.
+
+So now that this is written down, we could start discussing this more concretely. Notably, I am still not completely sure that this
+is correct, as it feels a bit "too simple".
