@@ -6,14 +6,21 @@
     <description>Recent content in Posts on Raphaël Sterbac Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2026 13:33:12 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 10:52:01 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>20th Week</title>
+      <link>http://localhost:1313/posts/20th-week/</link>
+      <pubDate>Tue, 23 Jun 2026 10:52:01 +0100</pubDate>
+      <guid>http://localhost:1313/posts/20th-week/</guid>
+      <description>&lt;h1 id=&#34;normalisation-for-explicit-universe-polymorphism&#34;&gt;Normalisation for explicit universe polymorphism&lt;/h1&gt;&#xA;&lt;p&gt;I drafted the proof for normalisation of a theory with universe polymorphism. I am not quite there yet, but I think that what I have written now&#xA;should the right thing to do. The notations are a bit shaky and the proof of the relative induction principle is not very precise (but to be fair, the ones in the original paper are not much more detailed&amp;hellip;), but with a bit&#xA;more work this should be in a good shape.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>19th Week</title>
       <link>http://localhost:1313/posts/19th-week/</link>
       <pubDate>Tue, 16 Jun 2026 13:33:12 +0100</pubDate>
       <guid>http://localhost:1313/posts/19th-week/</guid>
-      <description>&lt;h1 id=&#34;refactoring-my-implementation&#34;&gt;Refactoring my implementation&lt;/h1&gt;&#xA;&lt;p&gt;Last week, I have continued working on my implementation, and this is now at a quite good stage. Notably, the source files are now structured&#xA;and not monolithic as before, and I tried to refactor a bit my code so that it is more readable. I still have a few TODOs notably regarding the dataypes elaboration, for things&#xA;that I am a bit unsure of, or that can probably be simplified. In fact, as this is the first time that this has been concretely implemented (and also the first&#xA;time I implement such a big piece of type theory!), the code could surely be done in a better way. So this is not quite finished yet, but I am still quite happy with what the current result!&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;refactoring-my-implementation&#34;&gt;Refactoring my implementation&lt;/h1&gt;&#xA;&lt;p&gt;Last week, I have continued working on my implementation, and this is now at a quite good stage. Notably, the source files are now structured&#xA;and not monolithic as before, and I tried to refactor a bit my code so that it is more readable. I still have a few TODOs notably regarding the dataypes elaboration, for things&#xA;that I am a bit unsure of, or that can probably be simplified. In fact, as this is the first time that this has been concretely implemented (and also the first&#xA;time I implement such a big piece of type theory!), the code could surely be done in a better way. So this is not quite finished yet, but I am still quite happy with the current result!&lt;/p&gt;</description>
     </item>
     <item>
       <title>18th Week</title>

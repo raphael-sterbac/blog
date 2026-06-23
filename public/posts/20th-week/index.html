@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>20th Week | Raphaël Sterbac Blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Normalisation for explicit universe polymorphism
+I drafted the proof for normalisation of a theory with universe polymorphism. I am not quite there yet, but I think that what I have written now
+should the right thing to do. The notations are a bit shaky and the proof of the relative induction principle is not very precise (but to be fair, the ones in the original paper are not much more detailed&hellip;), but with a bit
+more work this should be in a good shape.">
+    <meta name="generator" content="Hugo 0.161.1">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/20th-week/">
+    
+
+    
+    
+    <meta property="og:url" content="http://localhost:1313/posts/20th-week/">
+  <meta property="og:site_name" content="Raphaël Sterbac Blog">
+  <meta property="og:title" content="20th Week">
+  <meta property="og:description" content="Normalisation for explicit universe polymorphism I drafted the proof for normalisation of a theory with universe polymorphism. I am not quite there yet, but I think that what I have written now should the right thing to do. The notations are a bit shaky and the proof of the relative induction principle is not very precise (but to be fair, the ones in the original paper are not much more detailed…), but with a bit more work this should be in a good shape.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-23T10:52:01+01:00">
+    <meta property="article:modified_time" content="2026-06-23T10:52:01+01:00">
+
+  <meta itemprop="name" content="20th Week">
+  <meta itemprop="description" content="Normalisation for explicit universe polymorphism I drafted the proof for normalisation of a theory with universe polymorphism. I am not quite there yet, but I think that what I have written now should the right thing to do. The notations are a bit shaky and the proof of the relative induction principle is not very precise (but to be fair, the ones in the original paper are not much more detailed…), but with a bit more work this should be in a good shape.">
+  <meta itemprop="datePublished" content="2026-06-23T10:52:01+01:00">
+  <meta itemprop="dateModified" content="2026-06-23T10:52:01+01:00">
+  <meta itemprop="wordCount" content="748">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="20th Week">
+  <meta name="twitter:description" content="Normalisation for explicit universe polymorphism I drafted the proof for normalisation of a theory with universe polymorphism. I am not quite there yet, but I think that what I have written now should the right thing to do. The notations are a bit shaky and the proof of the relative induction principle is not very precise (but to be fair, the ones in the original paper are not much more detailed…), but with a bit more work this should be in a good shape.">
+
+	
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js" integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
+
+
+  </head><body class="ma0 avenir bg-near-white development is-page is-page page-20th-week">
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Raphaël Sterbac Blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+
+  <article class="page-20th-week flex-l mw7 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">20th Week</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2026-06-23T10:52:01+01:00">June 23, 2026</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><h1 id="normalisation-for-explicit-universe-polymorphism">Normalisation for explicit universe polymorphism</h1>
+<p>I drafted the proof for normalisation of a theory with universe polymorphism. I am not quite there yet, but I think that what I have written now
+should the right thing to do. The notations are a bit shaky and the proof of the relative induction principle is not very precise (but to be fair, the ones in the original paper are not much more detailed&hellip;), but with a bit
+more work this should be in a good shape.</p>
+<p>There are still a few things were I am a bit uncertain though. For instance, should we ask the higher-order level algebra to be a preorder instead of just a set with a zero and successor ? In the current version, the ordering for levels does not really appear,
+so I wonder if there is something wrong.</p>
+<h1 id="exploring-applications-and-examples">Exploring applications and examples</h1>
+<p>I have been thinking about finding relevant applications and examples for the smallness of datatypes and records. Of course, category theory
+is the primary example that comes to mind, because there are a lot of universes involved. For category theory, the main sources of reference that I found
+were the paper &ldquo;Category theory in Coq 8.5&rdquo; by Timany and Jacobs, and the paper on universe polymorphism by Timany and Sozeau.</p>
+<p>The Agda-Unimath library is also a good reference, and the common thing between all of these is that they define categories with universe levels in the definition. There, doing things at the top
+universe and then specialising to small things is of course quite compelling, but for this we actually need a smallness judgement on record types.
+This judgement should check that each of the fields of the record are small. In particular, this coincides with the smallness judgement for the encoding of records through Sigmas and Unit types. Hence, we can add a new syntactic
+construction <code>R @ i</code> which forms the product with the smallness judgement at level i, so that we are only enable to inhabit this type with something that has small fields.</p>
+<p>While trying to find relevant examples, I also come across the Choice tree Rocq library (there was a talk at Cambridge the other day on this!), which has faced several universe constraint issues due to the interaction of multiple libraries.
+I think that this is also a good selling point : by moving universe levels from the definition to the instantiation we should improve the interaction between different libraries. But this also made me realise that things like this will not ever be able to be instantiated as small:</p>
+<pre tabindex="0"><code>data ITree (E : Tp -&gt; Tp) (R : Tp) : Tp where {
+  Ret : R -&gt; ITree E R ;
+  Tau : ITree E R -&gt; ITree E R ;
+  Vis : (X : Tp) -&gt; (e : E X) -&gt; (k : X -&gt; ITree E R) -&gt; ITree E R
+} ;
+</code></pre><p>Because the <code>Vis</code> constructor takes a big type. For this, I thought that maybe we could also add a <code>D @ i</code> syntax for datatypes that would &ldquo;downcast&rdquo;
+the signature of each constructor and create a new associated datatype. Concretely, it would look at the type of each constructor and would put <code>U i</code> in place of <code>Tp</code> and apply the other relevant changes. In this example, it would create the type:</p>
+<pre tabindex="0"><code>data ITree (E : Tp -&gt; Tp) (R : Tp) : Tp where {
+  Ret : R -&gt; ITree E R ;
+  Tau : ITree E R -&gt; ITree E R ;
+  Vis : (X : U i) -&gt; (e : E X) -&gt; (k : X -&gt; ITree E R) -&gt; ITree E R
+} ;
+</code></pre><p>Of course, this is done in the core language so we would need to adapt the decodings of <code>X</code> among other things. Actually, this looks a bit like a &ldquo;two-sortification&rdquo; where we make everything dependent on a universe.
+However, this seems quite evil, and maybe we should not try to do that and accept that in this case we would define <code>X</code> to be a small type in the definition of ITrees.</p>
+<h1 id="implementation">Implementation</h1>
+<p>I continued the implementation, and added record types for category theory. However, the implementation is currently quite all over the place because I tried to implement
+this downcasting thing, which was quite tricky and lead to many unsound attempts. But I think that I will arrive somewhere, and this downcasting thing is probably a bad idea in any case.</p>
+<ul class="pa0">
+  
+</ul>
+
+      
+    </div></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  Raphaël Sterbac Blog 2026 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -49,8 +49,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Posts">
-  <meta itemprop="datePublished" content="2026-06-16T13:33:12+01:00">
-  <meta itemprop="dateModified" content="2026-06-16T13:33:12+01:00">
+  <meta itemprop="datePublished" content="2026-06-23T10:52:01+01:00">
+  <meta itemprop="dateModified" content="2026-06-23T10:52:01+01:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Posts">
 
@@ -100,6 +100,27 @@
   <div class="mb3 pa4 gray overflow-hidden bg-white">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/20th-week/" class="link black dim">
+        20th Week
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h1 id="normalisation-for-explicit-universe-polymorphism">Normalisation for explicit universe polymorphism</h1>
+<p>I drafted the proof for normalisation of a theory with universe polymorphism. I am not quite there yet, but I think that what I have written now
+should the right thing to do. The notations are a bit shaky and the proof of the relative induction principle is not very precise (but to be fair, the ones in the original paper are not much more detailed&hellip;), but with a bit
+more work this should be in a good shape.</p>
+    </div>
+    <a href="/posts/20th-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/19th-week/" class="link black dim">
         19th Week
       </a>
@@ -109,7 +130,7 @@
 <p>Last week, I have continued working on my implementation, and this is now at a quite good stage. Notably, the source files are now structured
 and not monolithic as before, and I tried to refactor a bit my code so that it is more readable. I still have a few TODOs notably regarding the dataypes elaboration, for things
 that I am a bit unsure of, or that can probably be simplified. In fact, as this is the first time that this has been concretely implemented (and also the first
-time I implement such a big piece of type theory!), the code could surely be done in a better way. So this is not quite finished yet, but I am still quite happy with what the current result!</p>
+time I implement such a big piece of type theory!), the code could surely be done in a better way. So this is not quite finished yet, but I am still quite happy with the current result!</p>
     </div>
     <a href="/posts/19th-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -299,29 +320,6 @@ was a lot of fun ! Maybe there are also interesting ideas to get from the paper 
 Theory for Type Theory with Explicit Universe Polymorphism</em>, that I should probably try to read at some point.</p>
     </div>
     <a href="/posts/7th-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="w-100 w-30-l mb4 relative bg-white">
-          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
-  <div class="mb3 pa4 gray overflow-hidden bg-white">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/6th-week/" class="link black dim">
-        6th Week
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h1 id="implementing-the-fuss-free-hierarchy">Implementing the Fuss-Free hierarchy</h1>
-<p>I have been continuing my implementation of the fuss-free hierarchy this week,
-Last week, I added synthesis rule for Pi and U, but that is not necessary if we write another function &lsquo;checkTy&rsquo; which corresponds
-to a new judgment in the bidirectional typing algorithm, which checks a term against Type. We can also add an optional size to
-this judgement, which tells the elaborator to check it against $Small_i$ and produces a small type. I have implemented all of that,
-and it seems to be working! I still need to put my implementation to more tests though.</p>
-    </div>
-    <a href="/posts/6th-week/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
