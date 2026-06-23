@@ -47,8 +47,6 @@ data ITree (E : Tp -> Tp) (R : Tp) : Tp where {
 ```
 
 Of course, this is done in the core language so we would need to adapt the decodings of `X` among other things. Actually, this looks a bit like a "two-sortification" where we make everything dependent on a universe.
-An issue that appears is whether `D @ i` is a subtype of `D`, such that if we have a small ITree it is also a large ITree. To do this, we would need to add things in the `coe` operation in elaboration so that it is able 
-to go under $\mu$ and descriptions.
 However, this seems quite evil, and maybe we should not try to do that and accept that in this case we would define `X` to be a universe-polymorphic small type in the definition of ITrees. 
 
 # Implementation 
